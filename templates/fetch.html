@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VVCE</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/fetch.css') }}">
+    <link rel="icon" type="image/icon" href="{{ url_for('static', filename='images/logo.ico') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo-name">
+            <img src="{{ url_for('static', filename='assets/clglogo.png') }}" alt="Logo" class="logo-img">
+            <h2 class="heading-nav">Vidyavardhaka College of Engineering</h2>
+        </div>
+        <a href="{{url_for('index')}}"><button data-translate class="dashboard">Save</button></a>
+    </div>
+    <div class="firstdiv">
+        <div class="seconddiv">
+            <div class="statusf">
+                <form method="POST" action="/fetchdetails" onsubmit="fetchdetails();">
+                    <div class="input-box">
+                        <input type="text" required="required" id="usn" name="usn" data-translate
+                            placeholder="USN" autocomplete="off" data-translate>
+
+                    </div>
+                    <br>
+                    <div>
+                        <button type="submit" class="btn" data-translate>Submit</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="statuss">
+                <h1 data-translate>{{ message }}</h1>
+            </div>
+        </div>
+
+        <div class="thirddiv">
+            {%if message == "Data Found!" %}
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col" data-translate>Field</th>
+                        <th scope="col" data-translate>Information</th>
+
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row" data-translate>Name</th>
+                        <td data-translate>{{name}}</td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row" data-translate>USN</th>
+                        <td data-translate>{{ usn }}</td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row" data-translate>DOB</th>
+                        <td data-translate>{{ DOB }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" data-translate>Blood Group</th>
+                        <td data-translate>{{ blood_group }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" data-translate>City</th>
+                        <td data-translate >{{ address }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" data-translate>Ph Number</th>
+                        <td data-translate>{{ ph_number }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div>
+            </div>
+            {% else %}
+            <div class="out">
+                <img src="{{ url_for('static', filename='assets/clglogo.png') }}" alt="Logo" class="logo-out">
+            </div> 
+            {% endif %}
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/fetch.js') }}"></script>
+
+</body>
+
+</html>

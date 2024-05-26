@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VVCE</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="icon" type="image/icon" href="{{ url_for('static', filename='images/logo.ico') }}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo-name">
+            <img src="{{ url_for('static', filename='assets/clglogo.png') }}" alt="Logo" class="logo-img">
+            <h2 class="heading">Vidyavardhaka College of Engineering</h2>
+        </div>
+        <a href="{{url_for('fetch')}}"><button data-translate>Fetch Details</button></a>
+    </div>
+
+    <div class="mid-box">
+        <div class="wrapper">
+            <form method="POST" action="/savedetails" onsubmit="return savedetails();">
+                <h2>Enter Details</h2>
+                <div class="input-box">
+                    <input type="text" required="required" autocomplete="new-password" id="name">
+                    <span style="font-weight: 700px;">Full Name</span>
+                </div>
+
+                <div class="input-box">
+                    <input type="text" required="required" autocomplete="new-password" id="usn">
+                    <span style="font-weight: 700px;">USN</span>
+                </div>
+
+                <div class="input-box">
+                    <input type="date" placeholder="DOB" autocomplete="new-password" id="DOB">
+                    <span>DOB</span>
+                </div>
+
+                <div class="input-bg">
+                    
+                    <label for="blood-group" style="display: none;">Blood Group</label>
+                    <select id="blood-group" class="dropbtn">
+                        <option value="" disabled selected>Blood Group</option>
+                        <option value="A+">A +</option>
+                        <option value="A-">A -</option>
+                        <option value="B+">B +</option>
+                        <option value="B-">B -</option>
+                        <option value="AB+">AB +</option>
+                        <option value="AB-">AB -</option>
+                        <option value="O+">O +</option>
+                        <option value="O-">O -</option>
+                    </select>
+                    <div class="dropdown-content">
+                        <a href="#">A+</a>
+                        <a href="#">O+</a>
+                        <a href="#">AB+</a>
+                        <a href="#">AB-</a>
+                        <a href="#">A-</a>
+                        <a href="#">O-</a>
+                    </div>
+                    
+                </div>
+
+                <div class="input-box">
+                    <input type="text" required="required" autocomplete="new-password" id="address">
+                    <span style="font-weight: 700px;">City</span>
+                </div>
+
+
+                <div class="input-box">
+                    <input type="text" required="required" autocomplete="new-password" id="contact-number" id="contact-number" >
+                    <span style="font-weight: 700px;">Contact Number</span>
+                </div>
+
+                <button type="submit" class="btn">Save Details</button><br>
+            </form>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+
+</body>
+
+</html>

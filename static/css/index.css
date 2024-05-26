@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+a {
+   
+    text-decoration: none;
+}
+.column {
+    display: flex;
+    flex-grow: 1;
+    float: left;
+    width: 50%;
+        
+}
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+    font-family:poppins ;
+}
+
+.im {
+    height: 30px;
+    width: 30px;
+    display: block; 
+    margin: auto; 
+}
+
+.dropbtn {
+    background-color: #fff;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width:100%;
+    padding: 10px;
+    background:#fff;
+    border: 1px solid rgba(27, 22, 22, 0.304);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    outline: none;
+   
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border: 1px solid rgba(27, 22, 22, 0.304);
+    margin-top: 10px;
+    right: 0; /* Align dropdown to the right */
+}
+
+.wrapper {
+    width: 500px;
+    background: #fff;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: black;
+    border-radius: 10px;
+    padding: 30px 30px; /* Adjust the top and bottom padding */
+}
+.wrapper h2{
+    margin-top: 0px;
+    font-size: 30px;
+    text-align: center;
+}
+.wrapper.input-box{
+    width: 100%;
+    height: 20px;
+    margin: 30px 0;
+    
+}
+.input-box{
+    position: relative;
+    margin-bottom: 15px;
+   
+}
+.input-box input{
+    width:100%;
+    padding: 10px;
+    background:#fff;
+    border: 1px solid rgba(27, 22, 22, 0.304);
+    border-radius: 10px;
+    outline: none;
+    font-size: 1em;
+    color: #000;
+}
+.input-box input::placeholder{
+    color:black;
+    font-size: bold;
+}
+.input-box span{
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    transition: 0.5s;
+    color: #666e7188;
+}
+
+.input-box input:valid ~ span,
+.input-box input:focus ~ span
+{
+    color: black;
+    transform: translateX(10px) translateY(-7px);
+    font-size: .70em;
+    padding: 0 15px;
+    letter-spacing:0.2em;
+    background:#fff;
+
+}
+.wrapper .remember-forgot{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+    float: right;
+}
+
+
+.wrapper .btn {
+    width: 100%;
+    height: 45px;
+    background: #9dede1; 
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    transition:  0.3s ease ,transform 0.4s ease; 
+    margin-top: 10px;
+}
+
+.wrapper .btn:hover {
+    background:  #0dcaad; 
+}
+
+.wrapper .btn:active {
+    transform: scale(0.85); 
+}
+
+
+input:focus {
+    outline: none;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #9dede1;
+    padding-inline: 30px;
+
+}
+
+
+.navbar a {
+    float: left;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+
+
+.heading{
+  color: #333;
+}
+
+.heading-1{
+  margin: 2%;
+  color: #9dede1;
+}
+
+button {
+    background-color: white;
+    color: #0dcaad;;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: auto;
+    font-size: medium;
+    font-family: 'Poppins', sans-serif;
+}
+
+button:hover {
+  font-weight: 900;  
+} 
+
+.mid-box{
+    width: 100%;
+    height: calc(100vh - 90.88px);
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.logo-name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.logo-img{
+    height: 50px;
+}
+.wrapper.input-bo{
+    width: auto;
+    height: 20px;
+    margin: 30px 0;
+    
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+::placeholder{
+    color: orange;
+}
